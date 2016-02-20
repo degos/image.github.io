@@ -2,8 +2,10 @@
  * Created by W on 20/02/2016.
  */
 
-function drawCanvas() {
+function drawCanvas(){
+    var top = $("#text-top").val();
     var apellido = $("#apellido").val().toUpperCase();
+    var down = $("#text-down").val();
     tam=apellido.length;
 
     var canvas = document.getElementById("myCanvas");
@@ -17,10 +19,12 @@ function drawCanvas() {
         context.fillStyle="#FFF";
         context.font = "bold 35pt Calibri";
         context.textAlign = 'center';
-        context.fillText(apellido, x, 100);
+        context.fillText(top, x, 50);
+        context.fillText(apellido, x, 90);
+        context.fillText(down, x, 130);
         context.fillStyle="#CC00FF";
     };
-    imageObj.src = "static/images/layout.jpg";
+    imageObj.src = "static/images/layout2.jpg";
 }
 function create(a){
     var canvas = document.getElementById("myCanvas");
