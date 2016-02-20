@@ -6,8 +6,8 @@ function drawCanvas() {
     var apellido = $("#apellido").val().toUpperCase();
     tam=apellido.length;
 
+    var canvas = document.getElementById("myCanvas");
 
-    var canvas = document.getElementById("canvas");
     var x = canvas.width / 2;
     var y = canvas.height / 2;
     var context = canvas.getContext("2d");
@@ -21,4 +21,10 @@ function drawCanvas() {
         context.fillStyle="#CC00FF";
     };
     imageObj.src = "static/images/layout.jpg";
+}
+function create(a){
+    var canvas = document.getElementById("myCanvas");
+    var dataURL = canvas.toDataURL();
+    document.getElementById('canvasImg').src = dataURL;
+    a.href=dataURL;
 }

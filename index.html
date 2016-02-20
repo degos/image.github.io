@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <!-- Standard Meta -->
@@ -73,13 +73,10 @@
                         <div class="ui equal width stackable internally celled grid">
                             <div class="center aligned row">
                                 <div class="column">
-                                    <img src="static/images/layout.jpg" alt="" width="300" height="300">
+                                    <canvas id="myCanvas" width="300" height="300"></canvas>
                                 </div>
                                 <div class="column">
-                                    <canvas id="canvas" width="300" height="300">
-                                        <!— Fallback content —>
-                                        <p>We apologize, your browser does not support canvas at this time!</p>
-                                    </canvas>
+                                    <img id="canvasImg" alt="Guarda la imagen que se generé">
                                 </div>
                             </div>
                         </div>
@@ -91,7 +88,9 @@
                         <input type="text" name="apellido" placeholder="Apellido" id="apellido">
                     </div>
                 </div>
-                <div class="ui fluid large primary button" onclick="drawCanvas()">Crear Imagen</div>
+                <div class="ui fluid large primary button" onclick="drawCanvas()">Aceptar</div>
+                <br>
+                <a class="ui fluid large primary button" href="#" class="button" onclick="create(this)">Descargar Imagen</a>
             </div>
 
             <div class="ui error message"></div>
@@ -109,7 +108,10 @@
                             Ingresa tu apellido paterno
                         </li>
                         <li>
-                            click en "Genrerar Imagen"
+                            click en "Aceptar"
+                        </li>
+                        <li>
+                            click en "Descargar Imagen"
                         </li>
                         <li>
                             Guarda la imagen que se creo (click derecho, Guardar imagen como)
@@ -119,7 +121,7 @@
             </div>
         </div>
         <div class="ui message">
-            Sugerencias? emial: brandon.a.s.200@gmail.com
+            Sugerencias? <a href="#"> email</a>
         </div>
     </div>
 </div>
