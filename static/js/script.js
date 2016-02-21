@@ -4,7 +4,7 @@
 
 function drawCanvas(){
     var top = $("#text-top").val();
-    var apellido = $("#apellido").val().toUpperCase();
+    var apellido = $("#apellido").val();
     var down = $("#text-down").val();
     tam=apellido.length;
 
